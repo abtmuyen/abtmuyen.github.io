@@ -349,6 +349,18 @@ header h1{font-size:42px;margin-bottom:10px;color:var(--accent-dark)}
 
  <footer><div style="padding:18px 10px;text-align:center">© 2025 Mai Uyen — <span data-lang-key="footer_note">Built with 🩵 on GitHub Pages</span></div></footer>
 
+<audio id="bgm" src="music.mp3" loop></audio>
+
+<script>
+  function startMusic() {
+    document.getElementById("bgm").play();
+    document.removeEventListener("click", startMusic);
+  }
+
+  document.addEventListener("click", startMusic);
+</script>
+
+
  <script>
  /* ====== DOM Helpers & Selectors ====== */
  const headerEl = document.querySelector('header');
